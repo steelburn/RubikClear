@@ -1,0 +1,12 @@
+services:
+  rubikclear:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rubikclear
+    restart: unless-stopped
+    ports:
+      # Exposes container port 80 to host port 80 (or change 8080:80 if port 80 is occupied)
+      - "80:80"
+    environment:
+      - NODE_ENV=production

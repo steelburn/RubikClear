@@ -52,7 +52,21 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
    - **iPhone (iOS Safari)**: Tap the Share button ➔ "Add to Home Screen".
    - **Android (Chrome)**: Tap the three dots menu ➔ "Install app" or "Add to Home Screen".
 
-### 3. Packaging into Native Android & iOS Apps (Capacitor)
+### 3. Running in Docker Container (Production & Public Deployment)
+You can run RubikClear inside an optimized Nginx multi-stage container:
+
+```bash
+# Using Docker Compose (recommended)
+docker compose up -d --build
+
+# Or using plain Docker CLI:
+docker build -t rubikclear .
+docker run -d -p 80:80 --name rubikclear --restart unless-stopped rubikclear
+```
+
+The app is now accessible at `http://<YOUR_SERVER_IP_OR_DOMAIN>` on port 80.
+
+### 4. Packaging into Native Android & iOS Apps (Capacitor)
 To build standalone native packages for Google Play and the Apple App Store:
 
 1. Build the production web bundle:
