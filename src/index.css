@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #020617; /* slate-950 */
+  color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Safe Area Insets for Mobile PWA (iOS Dynamic Island, Notch, & Android Status/Nav Bars) */
+.safe-area-inset {
+  padding-top: max(env(safe-area-inset-top, 0px), 14px);
+  padding-bottom: max(env(safe-area-inset-bottom, 0px), 12px);
+  padding-left: max(env(safe-area-inset-left, 0px), 12px);
+  padding-right: max(env(safe-area-inset-right, 0px), 12px);
+}
+
+.pt-safe {
+  padding-top: max(env(safe-area-inset-top, 0px), 14px);
+}
+
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom, 0px), 14px);
+}
+
+.pl-safe {
+  padding-left: max(env(safe-area-inset-left, 0px), 12px);
+}
+
+.pr-safe {
+  padding-right: max(env(safe-area-inset-right, 0px), 12px);
+}
+
+/* Smooth Touch Interactions on Mobile */
+button, input, select {
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}

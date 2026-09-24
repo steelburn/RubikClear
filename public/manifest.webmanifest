@@ -1,0 +1,25 @@
+{
+  "name": "RubikClear - 3D Rubik's Cube Solver",
+  "short_name": "RubikClear",
+  "description": "Visual 3D Rubik's Cube Solver with camera photo scanning and step-by-step guidance.",
+  "theme_color": "#020617",
+  "background_color": "#020617",
+  "display": "standalone",
+  "orientation": "portrait",
+  "start_url": "/",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
